@@ -35,5 +35,55 @@ This project demonstrates real-world backend logic and enterprise-level data han
 
 ---
 
-## 📂 Project Structure
+2️⃣ Create Virtual Environment
+
+Windows:
+
+python -m venv venv
+venv\Scripts\activate
+
+
+Mac/Linux:
+
+python3 -m venv venv
+source venv/bin/activate
+
+3️⃣ Install Required Packages
+
+pip install django mysqlclient openpyxl pandas reportlab pypandoc
+
+
+4️⃣ Configure MySQL Database
+
+Create a database in MySQL:
+
+Database Name: excel_db
+
+Update settings.py:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'excel_db',
+        'USER': 'root',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+
+
+5️⃣ Apply Migrations
+python manage.py makemigrations
+python manage.py migrate
+
+
+6️⃣ Run the Development Server
+python manage.py runserver
+
+
+Open in browser:
+
+http://127.0.0.1:8000/
+
 
